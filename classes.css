@@ -1,0 +1,21 @@
+div.text {
+  
+  position: absolute;
+  top: 235px;
+  right: 100;
+  width: 300px;
+  height: 100px;
+  border: none;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  
+  
+}
+       div.background{
+           position: absolute;
+           top: 232 px;
+           left: 4px;
+           width: 10px;
+           height: 10px;
+		   
+       }       
