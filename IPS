@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Veriler</title>
+</head>
+ 
+<body>
+<table border="1" align="center" width="80%">
+<tr>
+<td>ID</td>
+<td>IP</td>
+<td>Time</td>
+<td>Date</td>
+    </tr>
+
+
+
+
+<?php
+date_default_timezone_set('Europe/Istanbul');
+$servername = "localhost:3306";
+$database = *****
+$username = ****
+$password = *****;
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+$result=mysqli_query($conn,"SELECT*FROM ips");
+
+
+while($column=mysqli_fetch_array($result)){
+	echo'<tr>';
+    echo '<td>'.$column['ID'].'</td>';
+    echo '<td>'.$column['IP'].'</td>';
+	echo '<td>'.$column['Time'].'</td>';
+	echo '<td>'.$column['Date'].'</td>';
+	
+                                        
+
+        
+    echo '</tr>';
+}
+?>
+    </table>
+
+    </body>
+</html>
+
+
+
+
