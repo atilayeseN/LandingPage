@@ -1,18 +1,18 @@
 <html>
  
-<head>
-<meta charset="utf-8">
-<title>Veriler</title>
-</head>
+ <head>
+  <meta charset="utf-8">
+  <title>Veriler</title>
+ </head>
  
-<body>
-<table border="1" align="center" width="80%">
-<tr>
-<td>ID</td>
-<td>Email</td>
-<td>Öneriler</td>
-<td>Tikler</td>
-    </tr>
+ <body>
+  <table border="1" align="center" width="80%">
+   <tr>
+    <td>ID</td>
+    <td>Email</td>
+    <td>Öneriler</td>
+    <td>Tikler</td>
+   </tr>
 
 
 
@@ -31,21 +31,15 @@ $result=mysqli_query($conn,"SELECT*FROM advices");
 mysqli_set_charset($baglan, "utf8");
 
 while($column=mysqli_fetch_array($result)){
-	echo'<tr>';
+  echo'<tr>';
     echo '<td>'.$column['ID'].'</td>';
-    
-    
-    
     echo '<td>'.$column['Email'].'</td>';
-                                        
     echo '<td>'.$column['advice'].'</td>';
-                                           
     echo '<td>'.$column['ticks'].'</td>';
-        
-    echo '</tr>';
+   echo '</tr>';
 }
 ?>
-    </table>
+  </table>
 
-    </body>
+ </body>
 </html>
